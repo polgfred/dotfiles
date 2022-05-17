@@ -16,6 +16,8 @@
 	tool = vscode
 [mergetool]
 	keepBackup = true
+[pull]
+	rebase = true
 [push]
 	default = simple
 [grep]
