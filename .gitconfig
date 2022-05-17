@@ -1,0 +1,25 @@
+[alias]
+	co = checkout
+	br = branch
+	st = status
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[core]
+	pager = less -x2
+	whitespace = -trailing-space
+	quotepath = false
+[diff]
+	tool = vscode
+[merge]
+	tool = vscode
+[mergetool]
+	keepBackup = true
+[push]
+	default = simple
+[grep]
+	extendedRegexp = true
+[user]
+	name = Frederick Polgardy
+	email = fred@polgardy.com
