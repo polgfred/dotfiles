@@ -11,14 +11,17 @@ bashcompinit
 
 alias -- +=code
 
-if [ "$CODESPACES" = "true" ]; then
-  if [ -d /usr/local/vcpkg/scripts ]; then
+if [ -d /workspaces ]
+then
+  if [ -d /usr/local/vcpkg/scripts ]
+  then
     source /usr/local/vcpkg/scripts/vcpkg_completion.zsh
   fi
 
-  if [ -d /workspaces/codespace-tools ]; then
-    source /workspaces/codespace-tools/codespace-tools.sh
-    eval $(codespace-tools get_env_variables)
-    export PATH=$DEVCONTAINER_BIN_DIR:$PATH
+  if [ -f /workspaces/$RepositoryName/.env ]
+  then
+    set -a
+    source /workspaces/$RepositoryName/.env
+    set +a
   fi
 fi
