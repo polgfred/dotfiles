@@ -6,22 +6,8 @@ DISABLE_UPDATE_PROMPT=true
 plugins=(git virtualenv docker docker-compose)
 source $ZSH/oh-my-zsh.sh
 
-autoload bashcompinit
-bashcompinit
+autoload -Uz compinit
+compinit
 
 alias -- +=code
-
-if [ -d /workspaces ]
-then
-  if [ -d /usr/local/vcpkg/scripts ]
-  then
-    source /usr/local/vcpkg/scripts/vcpkg_completion.zsh
-  fi
-
-  if [ -f /workspaces/$RepositoryName/.env ]
-  then
-    set -a
-    source /workspaces/$RepositoryName/.env
-    set +a
-  fi
-fi
+alias riff="pnpm --filter web riff"
