@@ -1,4 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
+export CLOUDSDK_PYTHON=$(which python)
 
 ZSH_THEME="fred"
 DISABLE_AUTO_UPDATE=true
