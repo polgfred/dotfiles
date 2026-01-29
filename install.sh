@@ -7,9 +7,17 @@ sudo sed -i 's/\/bash/\/zsh/' /etc/passwd
 # link some files
 ln -sf $PWD/.zshrc ~/.zshrc
 ln -sf $PWD/.npmrc ~/.npmrc
-ln -sf $PWD/.riff_history ~/.riff_history
 ln -sf $PWD/fred.zsh-theme ~/.oh-my-zsh/custom/themes/fred.zsh-theme
 
+# deal with persistent history files
+history_files=(.zsh_history .node_repl_history .riff_history)
+for file in "${history_files[@]}"
+do
+  touch $PWD/$file
+  ln -sf $PWD/$file ~/$file
+done
+
+# claude
 mkdir -p ~/.claude
 ln -sf $PWD/.claude/settings.json ~/.claude/settings.json
 rm -rf ~/.claude/agents ~/.claude/output-styles
