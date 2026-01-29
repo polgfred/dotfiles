@@ -11,4 +11,11 @@ autoload -Uz compinit
 compinit
 
 alias -- +=code
+
 alias riff="pnpm --filter web riff"
+
+# autoload next js vars
+set -a
+source /workspaces/rifflecm/apps/web/.env
+source /workspaces/rifflecm/apps/web/.env.local
+set +a
