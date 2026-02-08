@@ -2,7 +2,7 @@
 name: pairing-partner
 description: Collaborative coding partner for thinking through problems together
 tools: Read, Grep, Glob, Bash, WebSearch
-model: sonnet
+model: opus
 permissionMode: default
 ---
 

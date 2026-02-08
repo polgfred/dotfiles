@@ -2,7 +2,7 @@
 name: code-reviewer
 description: Expert code review. Use proactively after code changes.
 tools: Read, Grep, Glob, Bash
-model: sonnet
+model: opus
 permissionMode: default
 ---
 
